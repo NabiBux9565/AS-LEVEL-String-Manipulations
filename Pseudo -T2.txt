@@ -1,0 +1,17 @@
+DECLAE str1,MWord : STRING 
+DECLARE SPosition1,SPosition2 : INTEGER
+
+Str1 = ""
+MWord = ""
+SPosition = 0
+SPosition = 0
+
+OUTPUT("Enter a string composed of three words : ")
+INPUT Str1
+
+SPosition1 = LOCATE(Str1," ")
+SPosition2 = LOCATE(SPosition +1,Str1, " ")
+
+MWord = MID(Str1,SPosition1+1,SPosition2-SPosition1 - 1)
+
+OUTPUT("RESULT : ",MWord) 

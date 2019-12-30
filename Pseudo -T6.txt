@@ -1,0 +1,33 @@
+DECLARE STR1,Str2,Char1,Char2 : STRING
+DECLARE Sum1,Sum2,Count : INTEGER
+
+Str1 = ""
+Str2 = ""
+Char1 = ""
+Char2 = ""
+Sum1 = 0
+Sum2 = 0
+
+OUTPUT("Enter first string : ")
+INPUT Str1
+
+OUTPUT("Enter second string : ")
+INPUT Str2
+
+FOR Count = 1 to LENGTH(Str1)
+    Char1 = MID(Str1,Count,1)
+    Sum1 = Sum1+ASC(Char1)
+NEXT Count
+ 
+For Count = 1 to LENGTH(Str2)
+    Char2 = MID(Str2,Count,1)
+    Sum2 = Sum2 + ASC(Char2)
+NEXT Count
+
+IF Sum1 = Sum2 
+   THEN
+      OUTPUT("It is ANAGRAM ")
+   ELSE
+      OUTPUT("IT IS NO ANAGRAM  ")
+END IF 
+

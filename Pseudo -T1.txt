@@ -1,0 +1,28 @@
+DECLARE Str1,Str2,FName1,FName2,LName1,LName3 : STRING
+DECLARE SPosition1,SPosition2 : INTEGER
+
+Str = ""
+Str2 = ""
+FName1 = ""
+FName2 = ""
+LName1 = ""
+LName2 = ""
+
+OUTPUT("Enter the first string : ")
+INPUT
+
+OUTPUT("Enter the second string : ")
+INPUT 
+
+SPositon1 = LOCATE(Str1," ")
+SPosition2 = LOCATE(Str2, " ")
+
+FName1 = LEFT(Str1,SPosition1)
+FName2 = LEFT(Str2,SPosition2)
+
+LName = RIGHT(Str1,LENGTH(Str1)-SPosition1)
+LName = RIGHT(Str2,LENGTH(Str2)-SPosition2)
+
+OUTPUT("RESULT : ",FName1 & LName2)
+OUTPUT("RESULT : ",FName2 & LName1)
+ 

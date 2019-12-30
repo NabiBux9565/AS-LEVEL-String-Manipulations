@@ -1,0 +1,23 @@
+DECLARE MyWord,Str1,Str2,Char1 : STRING
+DECLARE Count : INTEGER
+
+MyWord = ""
+Str1 = ""
+Str2 = ""
+Char1 = ""
+Count = 0
+
+OUTPUT ("Enter the string : ")
+INPUT STR1
+
+OUTPUT ("What to truncate : ")
+INPUT STR2
+
+FOR Count = 1 to LENGTH(Str1)
+    Char1 = MID(Str1,Count,1)
+    IF Char1 <> Str2
+       THEN
+          MyWord = MyWord & Char1
+    END IF
+NEXT Count
+OUTPUT(MyWord)

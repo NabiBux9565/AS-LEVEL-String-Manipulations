@@ -1,0 +1,17 @@
+DECLARE Str1,Str2,Char : STRING
+DECLARE Count : INTEGER
+
+Str1 = ""
+Str2 = ""
+Char = ""
+Count = 0
+
+OUTPUT("Enter the string to inverse : ")
+INPUT Str1
+
+FOR Count = LENGTH(Str1) to 1      STEP-1
+    Char = MID(Str1,Count,1)
+    Str2 = Str2 & Char
+NEXT Count 
+OUTPUT (Str2)
+ 

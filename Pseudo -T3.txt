@@ -1,0 +1,22 @@
+DECLARE Str1,Str2,Char1 : STRING
+DECLARE Count : INTEGER 
+CONSTANT Space = " "
+
+Str1 = ""
+Str2 = ""
+Char1 = ""
+Count = 0
+
+OUTPUT("Enter the string : ")
+INPUT Str1
+
+FOR Count = 1 to LENGTH(Str1)
+    Char1 = MID(Str1,Count,1)
+    Str2 = Str2 & char1
+    IF Char1 = Space 
+      THEN
+         OUTPUT(Str1)
+         Str1 = ""
+    END IF
+NEXT Count
+OUTPUT (Str1)

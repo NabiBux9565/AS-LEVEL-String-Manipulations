@@ -1,0 +1,30 @@
+DECLARE MyName,MySpecial,MyLetter,Char,Str1 : STRING
+DECLARE Count : INTEGER
+
+MyName = ""
+MySpecial = ""
+MyLetter = ""
+Char1 = ""
+Str1 = ""
+Integer = 0
+
+OUTPUT("Enter the string : ")
+INPUT Str1 
+
+FOR Count = 1 to LENGTH(Str1)
+    Char1 = MID(Str1,Count,1)
+    IF ASC((UPPER(Char1)) >= 65 AND ASC((UPPER(Char1)) <= 91
+      THEN
+        MyLetter = MyLetter & Char1
+      ELSEIF ASC(Char1)>= 48 AND ASC(Char1) <= 57
+            THEN
+              MyName = MyName & Char1
+            ELSE
+              MySpecial = MySpecial & Char1
+          ENDIF
+    ENDIF
+NEXT Count
+OUTPUT("LETTERS  : ",MyLetter)
+OUTPUT("Numbers : " ,MyNum)
+OUTPUT("Specials : ", Myspecial )
+ 
