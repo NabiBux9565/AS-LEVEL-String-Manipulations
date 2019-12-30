@@ -1,0 +1,54 @@
+DECLARE ValidNum,ValidLen,ValidBinaryString : BOOLEAN
+DECLARE Num1 : STRING
+DECLARE Sum,Count,NextNum,Binary,NumCount : INTEGER
+
+ValidNum = TRUE
+ValidLen = TRUE
+ValidBinaryString = TRUE
+Num1 = ""
+Sum = 0
+Count = 0
+NextNum = 0
+Binary = 128
+NumCount = 0
+
+OUTPUT("ENTER THE 8 DIGIT BINARY NUMBER")
+INPUT Num1
+
+FOR Count = 1 TO LENGTH(Num1)
+    NextNum = MID(Num1,Count,1)
+    NumCount  = NumCount + 1
+    IF NumCount > 8
+      THEN
+         ValidLen = FALSE
+    ENDIF
+NEXT Count
+
+FOR Count = 1 TO LENGTH(Num1)
+    NextNum = MID(Num1,Count,1)
+    IF ASC(NextNum) < 48 AND ASC(NextNum) > 41
+      THEN
+         ValidNum = FALSE
+    ENDIF
+NEXT Count
+
+IF ValidLen = FALSE OR ValidNum = FALSE
+  THEN
+     OUTPUT("INAVALID BINARY ")
+  ELSEIF ValidLen = TRUE AND ValidNum = TRUE
+        THEN
+           FOR Count = 1 TO LENGTH(Num1)
+               NextNum = MID(Num1,Count,1)
+               Sum = Sum + NextNum*Binary
+               Binary = Binary / 2
+           NEXT Count
+        OUTPUT("DECIMAL : ",Sum)
+  ENDIF
+ENDIF
+
+               
+
+       
+        
+
+
